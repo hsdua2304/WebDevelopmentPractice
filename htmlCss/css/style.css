@@ -1,0 +1,87 @@
+body{
+	background-color: #f4f4f4;
+/*	font-family: Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight: normal;*/
+
+	font: normal 16px Arial, Helvetica, sans-serif;
+	line-height: 1.6em;
+}
+
+.box-1{
+	background-color: #333;
+	color: #fff;
+	line-height: 3px;
+	text-align: center;
+	border: 5px blue solid;
+	padding:20px;
+	margin: 20px;
+	width: 100%;
+	/*position: fixed;*/
+}
+
+.box-1 h1{
+	font-family: Tahoma;
+	font-weight: lighter;
+	text-transform: uppercase;
+}
+
+.container{
+	width: 80%;
+	margin: 10px;
+}
+
+.listing{
+	border:solid 2px #333;
+	padding-left: 15px;
+	border-radius: 1.2em;
+}
+
+.listing ul{
+	list-style: circle;
+	padding-left: 20px;
+}
+
+.listing li{
+	padding-bottom: 6px;
+	/*border-bottom: dotted 1px #333;*/
+}
+
+.my-form{
+	padding:10px;
+	margin: 10px;
+}
+
+.my-form .form-group{
+	padding:10px;
+}
+
+.my-form label{
+display: block;
+}
+.my-form input[type='text'],input[type='email'],.my-form textarea{
+	width: 100%;
+	padding:5px;
+}
+
+.button{
+	border:none;
+	background-color: #333;
+	color: #fff;
+	padding:10px 15px;
+	text-align: center;
+	
+}
+
+.block{
+	float: left;
+	width: 33.3%;
+	border: 1px solid #ccc;
+	padding:10px;
+	border-style: border-box;
+	box-sizing: border-box;
+}
+
+.button:hover{
+	background-color: red;
+}
