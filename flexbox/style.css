@@ -1,0 +1,35 @@
+.cointainer-1{
+  display: flex;
+  /* flex-direction: row; */
+  align-items: start;
+  /* flex-wrap: wrap; */
+  /* flex-flow: row nowrap; */
+  /* flex-flow: row wrap; */
+  height: 100%;
+
+  /* justify-content: center; */
+  /* justify-content: space-between; */
+  /* justify-content: space-around; */
+  /* align-items: baseline; */
+  /* align-items: center; */
+  /* align-items: flex-end; */
+  /* align-content: center; */
+  /* align-content: space-around; */
+}
+
+.box{
+  border: solid 2px #ccc;
+  width: 10%;
+  height: 40%;
+}
+
+
+.box--featured{
+  border: solid 2px #ccc;
+  width: 10%;
+  height: 40%;
+  /* order: 0; */
+  /* flex-grow:1; */
+  /* align-self: flex-start; */
+  flex-basis: 50%;
+}
