@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> CSS Grid Layout</title>
+    <style>
+      .wrapper{
+        display: grid;
+        grid-template-columns:40% 30% 30%;
+        /* grid-column-gap:1em; */
+        grid-gap: 1em;
+      }
+
+      .wrapper > div{
+        background: aqua;
+        padding: 1em;
+      }
+      .wrapper > div:nth-child(odd){
+        background: rgb(250, 248, 79);
+      }
+    </style>
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <div>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </div>
+    </div>
+
+  </body>
+</html>
