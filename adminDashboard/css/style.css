@@ -1,0 +1,19 @@
+body{
+  background: #f4f4f4;
+}
+
+.navbar{
+  margin: 0 !important;
+  padding-bottom: 0 !important;
+  padding-top: 0 !important;
+}
+
+#header{
+  background: #282828;
+  color: #ffffff;
+  padding: 20px;
+}
+
+#header .create{
+  padding-top:10px;
+}
