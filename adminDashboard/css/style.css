@@ -53,6 +53,28 @@ body{
   color:#333333;
 }
 
-.website-overview{
-  padding : 2rem;
+
+
+.badge{
+  background: #777777 !important;
+  color: #ffffff;
+  padding: 3px 5px;
+  border-radius: 8px;
+}
+
+#footer{
+  background:#333333;
+  color:#ffffff;
+  text-align:center;
+  padding:30px;
+  margin-top:30px;
+}
+
+#login{
+  margin-top:30px;
+  margin-bottom: 30px;
+}
+
+.dash-box{
+  text-align:center;
 }

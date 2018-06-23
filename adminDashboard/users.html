@@ -26,22 +26,22 @@
 
         <div class="collapse navbar-collapse" id="navbars">
           <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="index.html">Dashboard <span class="sr-only">(current)</span></a>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Dashboard</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="pages.html">Pages</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="posts.html">Posts</a>
+              <a class="nav-link" href="posts.html">Posts  <span class="sr-only">(current)</span> </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item active">
               <a class="nav-link" href="users.html">Users</a>
             </li>
           </ul>
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#">Welcome | Harman</a>
+              <a class="nav-link" href="index.html">Welcome | Harman</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="login.html">Logout</a>
@@ -55,7 +55,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-10">
-            <h1><i class="fas fa-cog"></i> Dashboard <small> Manage Your Site</small></h1>
+            <h1><i class="fas fa-cog"></i> Users <small>Manage Users</small></h1>
           </div>
           <div class="col-md-2">
             <div class="dropdown create">
@@ -76,7 +76,8 @@
     <section>
       <div class="container">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item active">Dashboard</li>
+          <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+          <li class="breadcrumb-item active">Users</li>
         </ol>
       </div>
     </section>
@@ -86,12 +87,12 @@
         <div class="row">
           <div class="col-md-3">
             <div class="list-group">
-              <a href="index.html" class="list-group-item list-group-item-action main-color-bg">
+              <a href="index.html" class="list-group-item list-group-item-action">
                 <i class="fas fa-cog"></i> Dashboard
               </a>
               <a href="pages.html" class="list-group-item list-group-item-action"><i class="fas fa-file-alt"></i> Pages <span class="badge">23</span></a>
               <a href="posts.html" class="list-group-item list-group-item-action"><i class="fas fa-pencil-alt"></i> Posts <span class="badge">15</span></a>
-              <a href="users.html" class="list-group-item list-group-item-action"><i class="fas fa-users"></i> Users <span class="badge">35</span></a>
+              <a href="users.html" class="list-group-item list-group-item-action main-color-bg"><i class="fas fa-users"></i> Users <span class="badge">35</span></a>
             </div>
             <div class="card">
               <div class="card-body">
@@ -111,102 +112,54 @@
             </div>
           </div>
           <div class="col-md-9">
-            <!-- <div class="card"> -->
-                <div class="card-header main-color-bg">
-                  Website Overview
-                </div>
-                <div class="row">
-                  <div class="col-md-3">
-                    <div class="card bg-light text-center">
-                      <div class="card-header">
-                        <h5 class="card-title"><i class="fas fa-user"></i> Users </h5>
-                      </div>
-                      <div class="card-body text-center">
-                        <h5 class="card-text"> 23 </h5>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-3">
-                    <div class="card bg-light text-center">
-                      <div class="card-header">
-                        <h5 class="card-title"><i class="fas fa-file-alt"></i> Pages </h5>
-                      </div>
-                      <div class="card-body text-center">
-                        <h5 class="card-text"> 203 </h5>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-3">
-                    <div class="card bg-light text-center">
-                      <div class="card-header">
-                        <h5 class="card-title"><i class="fas fa-pencil-alt"></i> Posts </h5>
-                      </div>
-                      <div class="card-body text-center">
-                        <h5 class="card-text"> 34 </h5>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-3">
-                    <div class="card bg-light text-center">
-                      <div class="card-header">
-                        <h5 class="card-title"><i class="fas fa-chart-pie"></i> Visitors </h5>
-                      </div>
-                      <div class="card-body text-center">
-                        <h5 class="card-text"> 2030 </h5>
-                      </div>
-                    </div>
-                  </div>
-                <!-- </div> -->
-            </div>
             <div class="card">
-              <div class="card-header">
-                Latest Users
+              <div class="card-header main-color-bg">
+                    Users Overview
               </div>
-              <div class="container">
-                <table class="table table-hover">
+              <div class="card-body p-0">
+                <table class="table table-sm table-hover">
                   <thead>
                     <tr>
-                      <th scope="col">#</th>
-                      <th scope="col">First</th>
-                      <th scope="col">Last</th>
-                      <th scope="col">Handle</th>
+                      <th scope="col">Fistname</th>
+                      <th scope="col">Lastname</th>
+                      <th scope="col">Authorised</th>
+                      <th></th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <th scope="row">1</th>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
+                      <td>Harvard</td>
+                      <td>Stuard</td>
+                      <td><i class="fas fa-check"></i></td>
+                      <td><a class="btn btn-dark btn-sm" href="edit.html">Edit</a> <a class="btn btn-danger btn-sm" href="#">Delete</a></td>
                     </tr>
                     <tr>
-                      <th scope="row">2</th>
-                      <td>Jacob</td>
-                      <td>Thornton</td>
-                      <td>@fat</td>
+                      <td>Fat</td>
+                      <td>Belly</td>
+                      <td><i class="fas fa-times"></i></td>
+                      <td><a class="btn btn-dark btn-sm" href="edit.html">Edit</a> <a class="btn btn-danger btn-sm" href="#">Delete</a></td>
                     </tr>
                     <tr>
-                      <th scope="row">3</th>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
+                      <td>Ontario</td>
+                      <td>Galucci</td>
+                      <td><i class="fas fa-check"></i></td>
+                      <td><a class="btn btn-dark btn-sm" href="edit.html">Edit</a> <a class="btn btn-danger btn-sm" href="#">Delete</a></td>
                     </tr>
                     <tr>
-                      <th scope="row">4</th>
-                      <td>Larry</td>
-                      <td>the Bird</td>
-                      <td>@twitter</td>
+                      <td>Steve</td>
+                      <td>Lee</td>
+                      <td><i class="fas fa-check"></i></td>
+                      <td><a class="btn btn-dark btn-sm" href="edit.html">Edit</a> <a class="btn btn-danger btn-sm" href="#">Delete</a></td>
                     </tr>
                     <tr>
-                      <th scope="row">5</th>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
+                      <td>Angular Basics</td>
+                      <td>@mark</td>
+                      <td><i class="fas fa-check"></i></td>
+                      <td><a class="btn btn-dark btn-sm" href="edit.html">Edit</a> <a class="btn btn-danger btn-sm" href="#">Delete</a></td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-            </div>
           </div>
         </div>
       </div>
