@@ -1,0 +1,45 @@
+:root {
+  --heading-bg-color : #00a259;
+  --heading-txt-color : #ffffff;
+  --outer-solid-border : solid 1px #323232;
+  --font-family : "Arial",Helvetica;
+}
+
+.main-heading{
+  padding: 10px;
+  margin: 0;
+  background: var(--heading-bg-color);
+  color: var(--heading-txt-color);
+  border: var(--outer-solid-border);
+  font-family: var(--font-family);
+}
+
+.main-heading h1{
+  margin: 0;
+}
+
+.contianer{
+  padding: 10px;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5px;
+}
+
+.box{
+  --box-bg-color:#eee;
+  --box-padding : 10px;
+  --box-shadow-h-offset : 5px;
+  --box-shadow-v-offset : 10px;
+  --box-shadow-blur : 5px;
+}
+
+.box{
+  background: var(--box-bg-color);
+  font-family: var(--font-family);
+  padding: var(--box-padding);
+  border: var(--outer-solid-border);
+  box-shadow: var(--box-shadow-h-offset) var(--box-shadow-v-offset) var(--box-shadow-blur) #6f6f6f;
+}
