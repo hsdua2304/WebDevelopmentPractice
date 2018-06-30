@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>Apply JavaScript example</title>
+    <link rel="stylesheet" href="css/style.css">
+
+  </head>
+  <body id="body">
+    <!-- <button>Click me</button> -->
+    <div class="container">
+      <h1 id="heading">JavaScript Form Validation</h1>
+    </div>
+    <form class="myform" action="index.html" method="post" name="myform" onsubmit="return validateForm()">
+      <div class="form-group">
+        <label>FirstName</label>
+        <input type="text" name="firstName" class="form-control">
+      </div>
+      <br>
+      <div class="form-group">
+        <label>LastName</label>
+        <input type="text" name="lastName" class="form-control">
+      </div>
+      <br>
+      <div>
+        <label>Background Color</label>
+        <select name="background" id="background" onchange="changeColor(this)">
+          <option value="red">Red</option>
+          <option value="blue">Blue</option>
+          <option value="green">Green</option>
+        </select>
+      </div>
+      <br>
+       <input type="submit" value="Submit"/>
+    </form>
+
+    <script type="text/javascript">
+      function changeColor(x){
+        var heading = document.getElementById('heading');
+        heading.style.color = x.value;
+      }
+
+      function validateForm(){
+        var firstName = document.forms['myform']['firstName'].value;
+        // alert(firstName);
+
+        if (firstName == null || firstName == '') {
+          alert("Firstname is empty");
+          return false;
+        }
+      }
+
+      // document.addEventListener("DOMContentLoaded", function(){
+      //   function createParagraph(){
+      //     var para = document.createElement('p');
+      //     para.textContent = 'You clicked the button!';
+      //     document.body.appendChild(para);
+      //   }
+      //
+      //   var buttons = document.querySelectorAll('button');
+      //
+      //   for(var i = 0; i < buttons.length; i++){
+      //     buttons[i].addEventListener('click', createParagraph);
+      //   }
+      // });
+
+    </script>
+  </body>
+</html>
