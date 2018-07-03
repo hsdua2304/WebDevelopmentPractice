@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/style.css">
 
   </head>
-  <body id="body">
+  <body id="body" onload="alertFunction()">
     <!-- <button>Click me</button> -->
     <div class="container">
       <h1 id="heading">JavaScript Form Validation</h1>
@@ -34,21 +34,22 @@
        <input type="submit" value="Submit"/>
     </form>
 
-    <script type="text/javascript">
-      function changeColor(x){
-        var heading = document.getElementById('heading');
-        heading.style.color = x.value;
-      }
+    <script type="text/javascript" src="js/main.js">
 
-      function validateForm(){
-        var firstName = document.forms['myform']['firstName'].value;
-        // alert(firstName);
-
-        if (firstName == null || firstName == '') {
-          alert("Firstname is empty");
-          return false;
-        }
-      }
+      // function changeColor(x){
+      //   var heading = document.getElementById('heading');
+      //   heading.style.color = x.value;
+      // }
+      //
+      // function validateForm(){
+      //   var firstName = document.forms['myform']['firstName'].value;
+      //   // alert(firstName);
+      //
+      //   if (firstName == null || firstName == '') {
+      //     alert("Firstname is empty");
+      //     return false;
+      //   }
+      // }
 
       // document.addEventListener("DOMContentLoaded", function(){
       //   function createParagraph(){
