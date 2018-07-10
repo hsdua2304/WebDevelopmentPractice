@@ -243,27 +243,94 @@
 // PROTOTYPE VS INSTANCE
 // -------------------------------------------------------------------------------------------
 
-function Cat(name,color){
-    this.name = name;
-    this.color = color;
-}
+// function Cat(name,color){
+//     this.name = name;
+//     this.color = color;
+// }
 
-Cat.prototype.age = 3;
+// Cat.prototype.age = 3;//this sets the age property for the object created from backend object from which other objects will be inherited
 
-var fluffy = new Cat('Fluffy','White');
-var muffin = new Cat('Muffin','Brown');
+// var fluffy = new Cat('Fluffy','White');
+// var muffin = new Cat('Muffin','Brown');
+
+// Cat.prototype = {age:10}
+
+// var snowball = new Cat('SnowBall','OffWhite')
+
+// console.log(Cat.age);
+// console.log(fluffy.age);
+// console.log(snowball.age);
+
 
 //We are adding the age property to the instance property for fluffy
 // both instance still have age property define at the Prototype level
 // Instance property override the prototype property in case of fluffy
 
-fluffy.age = 5;
-console.log(fluffy);
-console.log(muffin);
-console.log(fluffy.__proto__.age,muffin.__proto__.age);
-console.log(fluffy.age,muffin.age,);
+// fluffy.age = 5;
+// console.log(fluffy);
+// console.log(muffin);
+// console.log(fluffy.__proto__.age,muffin.__proto__.age);
+// console.log(fluffy.age,muffin.age,);
 
-console.log(Object.keys(fluffy));
+// console.log(Object.keys(fluffy));
 
-console.log(Object.keys(muffin));
+// console.log(Object.keys(muffin));
 
+// -------------------------------------------------------------------------------------------
+// CREATING OWN CHAIN OF PROTOTYPES
+
+// 1----
+// function Animal(voice){
+//     this.voice = voice||'grunt';
+// }
+// 2---
+// Animal.prototype.speak = function() {
+//     console.log(this.voice)
+// }
+// 3---
+// function Cat(name,color){
+//     Animal.call(this,'Meow');//It will call the animal fucntion and animal related intialization will be done with the help of this initialization
+//     this.name = name;
+//     this.color = color;
+// }
+
+// Cat.prototype = Object.create(Animal.prototype) //Object.create() is not going to call animal function as we need to do this when we are creating the instances for the cat
+// Cat.prototype.constructor = Cat;// this will set the fluffy's construtor to be cat before it was Animal
+
+// var fluffy = new Cat('fluffy','white')
+
+// var miller = new Cat('Miller','brown')
+
+// console.log(miller)
+
+// console.log(miller instanceof Cat)
+
+// miller.speak()
+
+// 1--
+class Animal{
+    constructor(voice){
+        this.voice = voice || 'grunt';
+    }
+// 2--
+    speak(){
+        console.log(this.voice);
+    }
+}
+// 3--
+class Cat extends Animal{
+    constructor(name,color){
+        super('Meow');
+        this.name = name;
+        this.color = color;
+    }
+}
+
+var fluffy = new Cat('fluffy','white')
+
+console.log(fluffy.constructor)
+console.log(fluffy.__proto__.__proto__.__proto__)
+console.log(Object.keys(fluffy.__proto__.__proto__));
+console.log(fluffy.__proto__.__proto__.hasOwnProperty('speak'))
+
+console.log(Object.getOwnPropertyDescriptor(fluffy,'voice'))
