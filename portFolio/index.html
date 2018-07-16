@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+  </head>
+
+  <body">
+      <nav class='vertical-nav-fixed' id='sidenav'>
+        <ul class='nav-options'>
+          <li>
+            <a class="nav-item" href="#">
+              <div><img src="img/logo.png" alt="logo"/></div>
+              <div id="logo"></div>
+            </a>
+          </li>
+          <li>
+            <a class="nav-item" onclick="initScroll('main-about'); return false;" href="#">
+              <div class = "fas fa-user"></div>
+              <div id="about"></div>
+            </a>
+          </li>
+          <li>
+            <a class="nav-item" onclick="initScroll('main-education'); return false;" href="#">
+              <div class = "fas fa-graduation-cap"></div>
+              <div id="education"></div>
+            </a>
+          </li>
+          <li>
+            <a class="nav-item" onclick="initScroll('main-work'); return false;" href="#">
+              <div class = "fas fa-briefcase"></div>
+              <div id="work"></div>
+            </a>
+          </li>
+          <li>
+            <a class="nav-item" onclick="initScroll('main-skills'); return false;" href="#">
+              <div class = "fas fa-code"></div>
+              <div id="skills"></div>
+            </a>
+          </li>
+          <li>
+            <a class="nav-item" onclick="initScroll('main-contact'); return false;" href="#">
+              <div class = "fas fa-info-circle"></div>
+              <div id="contact"></div>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <main class='portfolio-window'>
+          <section id="main-about">
+            <h1>About</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+              et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+               laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in volupt</p>
+          </section>
+          <section id="main-education">
+            <h1>Education</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+              et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+               laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in volupt</p>
+          </section>
+          <section id="main-work">
+            <h1>Work Experience</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+              et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+               laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in volupt</p>
+          </section>
+          <section id="main-skills">
+            <h1>Skills</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+              et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+               laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in volupt</p>
+          </section>
+          <section id="main-contact">
+            <h1>Contact</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+              et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+               laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in volupt</p>
+          </section>
+      </main>
+
+      <script src="script.js"></script>
+  </body>
+
+</html>

@@ -1,0 +1,90 @@
+/* Styles go here */
+body{
+  background:#ccc;
+  font-family : Helvetica, sans-serif !important;
+  margin : 0;
+  position: relative;
+}
+
+.fas{
+  color:#aaa;
+}
+
+.fas:hover{
+  color:#000;
+}
+
+/* .main-window{
+  display:flex;
+  flex-wrap:wrap;
+} */
+
+.vertical-nav-fixed{
+  background:#fff;
+  font-size:31px;
+  height:100%;
+  width:7%;;
+  float:left;
+  position:fixed;
+  overflow:hidden;
+  z-index:1;
+  transition: 0.1s;
+}
+
+.vertical-nav-fixed ul{
+  margin:0;
+  padding:0;
+  position: fixed;
+  list-style-type :none;
+  display:flex;
+  flex-direction:column;
+  align-items:left;
+  justify-content:space-around;
+}
+
+.vertical-nav-fixed li{
+  margin:20px 0 20px 0;
+  padding:20px;
+}
+
+.vertical-nav-fixed .nav-options a{
+  /* width:auto !important; */
+  text-decoration:none;
+  font-size:0.8em;
+  transition:0.4s;
+}
+
+.nav-item{
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  position: fixed;
+}
+
+.nav-item img{
+  border-radius: 20px;
+  width:26px;
+  height:26px;
+  float: left;
+}
+
+.nav-item div:nth-child(2){
+  display:inline;
+  padding-left:10px;
+  color:#aaa;
+  font-size:0.9em;
+}
+
+.portfolio-window{
+  background:#fff;
+  /* padding-left: 100px; */
+  font-size:25px;
+  width:93%;
+  float:right;
+
+}
+
+#main-about,#main-education,#main-skills,#main-work,#main-contact{
+  height: 100vh;
+  padding: 20px 0px 0px 50px;
+}
