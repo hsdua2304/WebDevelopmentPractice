@@ -7,26 +7,23 @@ body{
 }
 
 .fas{
-  color:#aaa;
+  color:#fff;
 }
 
 .fas:hover{
   color:#000;
 }
 
-/* .main-window{
-  display:flex;
-  flex-wrap:wrap;
-} */
-
 .vertical-nav-fixed{
-  background:#fff;
+  background:#1b1c38;
   font-size:31px;
   height:100%;
-  width:7%;;
-  float:left;
+  width:90px;
   position:fixed;
-  overflow:hidden;
+  overflow-x:hidden;
+  top: 0;
+  left: 0;
+  padding-top: 20px;
   z-index:1;
   transition: 0.1s;
 }
@@ -34,52 +31,45 @@ body{
 .vertical-nav-fixed ul{
   margin:0;
   padding:0;
-  position: fixed;
+  margin:0 10px 0 10px;
   list-style-type :none;
-  display:flex;
-  flex-direction:column;
-  align-items:left;
-  justify-content:space-around;
+  position: fixed;
 }
 
 .vertical-nav-fixed li{
-  margin:20px 0 20px 0;
-  padding:20px;
+  padding:30px 0 30px 0;
 }
 
-.vertical-nav-fixed .nav-options a{
-  /* width:auto !important; */
+.nav-options li a{
+  padding: 6px 8px 6px 16px;
   text-decoration:none;
   font-size:0.8em;
-  transition:0.4s;
+  height: 25px
+  /* transition:0.4s; */
+  /* position: fixed; */
 }
 
-.nav-item{
+a.nav-item{
   display:flex;
   flex-direction:row;
   flex-wrap:wrap;
-  position: fixed;
 }
 
 .nav-item img{
   border-radius: 20px;
-  width:26px;
-  height:26px;
   float: left;
 }
 
 .nav-item div:nth-child(2){
-  display:inline;
   padding-left:10px;
-  color:#aaa;
+  color:#fff;
   font-size:0.9em;
 }
 
 .portfolio-window{
   background:#fff;
-  /* padding-left: 100px; */
   font-size:25px;
-  width:93%;
+  margin-left: 90px;
   float:right;
 
 }
