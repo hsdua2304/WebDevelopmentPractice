@@ -1,0 +1,142 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-image: url("/img/back.jpg");
+  font-family: Lato;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height :100vh;
+  width: 100vw;
+}
+
+/* .clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+} */
+
+.wrapper{
+  min-width:1000px;;
+  height: 70%;
+  background:white;
+  position:absolute;
+  align-self:center;
+  transform: translate(15vw,15vh);
+  box-shadow: 0px 10px 50px rgb(0,0,0.3);
+  overflow: hidden;
+}
+
+.player-0-panel,.player-1-panel{
+  width: 50%;
+  height: 100%;
+  float: left;
+  padding: 75px;
+}
+
+.player-name{
+  font-size: 30px;
+  text-transform:uppercase;
+  font-weight:100;
+  text-align: center;
+  letter-spacing: 2px;
+  margin-top: 10px;
+  margin-bottom:20px;
+/*   position: relative; */
+}
+
+.player-score{
+  font-size:100px;
+  text-align:center;
+  margin-bottom:20px;
+  margin-top:10px;
+  color:#EB4D4D;
+  font-weight:100;
+}
+
+.active{
+  background:#f7f7f7;
+}
+
+/* .active{
+  font-weight: 300;
+} */
+
+.active .player-name::after{
+  content: "\2022";
+  font-size: 30px;
+  color: #eb4d4d;
+  top: -7px;
+  right: 10px;
+}
+
+.current-box{
+  background:#EB4D4D;
+  color:#fff;
+  width:50%;
+  text-align:center;
+  margin:0 auto;
+  padding:10px;
+  position:relative;
+  top:100px;
+}
+
+.current-label {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: #222;
+}
+
+.current-score {
+    font-size: 30px;
+}
+
+button {
+    position: absolute;
+    width: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #555;
+    background: none;
+    border: none;
+    font-family: Lato;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 300;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover { font-weight: 600; }
+
+i {
+    color: #EB4D4D;
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 32px;
+    line-height: 1;
+    vertical-align: text-top;
+    margin-top: -4px;
+    transition: margin 0.3s;
+}
+
+.btn-new { top: 45px;}
+.btn-roll { top: 403px;}
+.btn-hold { top: 467px;}
+
+
+.dice {
+    position: absolute;
+    left: 50%;
+    top: 178px;
+    transform: translateX(-50%);
+    height: 100px;
+    box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
+}
+
+.winner { background-color: #f7f7f7; }
+.winner .player-name { font-weight: 300; color: #EB4D4D; }
