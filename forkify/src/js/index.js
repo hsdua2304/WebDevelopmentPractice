@@ -9,7 +9,7 @@ import {elements, renderLoader,clearLoader} from './views/base';
 import * as searchView from './views/searchView';
 import * as recipeView from './views/recipeView';
 import * as listView from './views/listView';
-
+import * as likeView from './views/likeView';
 
 
 /*Global state of the app
@@ -92,9 +92,10 @@ const controlRecipe = async () =>{
     
             //5. Render Results
             clearLoader();
-            recipeView.renderRecipe(state.recipe);
-            }catch(error){
-            alert('Error processing Recipes :( ');
+            recipeView.renderRecipe(state.recipe,state.likes.isLiked(id));
+            }catch (error){
+                console.log(error);
+                alert('Error processing Recipes :( ');
         }
     }
 }
@@ -119,6 +120,8 @@ const controlList = () => {
 // 
 // LIKES CONTROLLER
 // 
+state.likes = new Likes();
+likeView.toggleLikeMenu(state.likes.getNumLikes());
 
 const controlLikes = () => {
 
@@ -128,21 +131,25 @@ const controlLikes = () => {
     // When user has not liked the current recipe
     if(!state.likes.isLiked(currentID)){
         // Addnew like to the state
-        const newLike = state.likes.addLike(currentID, state.recipe.title, state.recipe.author, state.recipe.img);
+        const newLike = state.likes.addLike(currentID, state.recipe.title, state.recipe.author, state.recipe.image);
 
         // Toggle the like button
+        likeView.toggleLikeBtn(true);
 
         //Add Like to the UI List
-        console.log(state.likes);
+        likeView.renderLike(newLike);
 
     } else {
         // Remove like from the state
-
+        state.likes.deleteLike(currentID);
         // Toggle the like button
-
+        likeView.toggleLikeBtn(false);
+        
         // Remove the like from the UI
-        console.log(state.likes);
+        likeView.deleteLike(currentID);
+
     }
+    likeView.toggleLikeMenu(state.likes.getNumLikes());
 
 }
 
