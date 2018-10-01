@@ -66,7 +66,7 @@ elements.searchResultPages.addEventListener('click',e => {
 });
 
 // 
-// RECIPE CONTROLLER
+// RECIPE CONTROLLER 
 // 
 
 const controlRecipe = async () =>{
@@ -120,14 +120,12 @@ const controlList = () => {
 // 
 // LIKES CONTROLLER
 // 
-state.likes = new Likes();
-likeView.toggleLikeMenu(state.likes.getNumLikes());
 
 const controlLikes = () => {
-
+    
     if(!state.likes) state.likes = new Likes();
     const currentID = state.recipe.id;
-
+    
     // When user has not liked the current recipe
     if(!state.likes.isLiked(currentID)){
         // Addnew like to the state
@@ -135,10 +133,10 @@ const controlLikes = () => {
 
         // Toggle the like button
         likeView.toggleLikeBtn(true);
-
+        
         //Add Like to the UI List
         likeView.renderLike(newLike);
-
+        
     } else {
         // Remove like from the state
         state.likes.deleteLike(currentID);
@@ -147,11 +145,25 @@ const controlLikes = () => {
         
         // Remove the like from the UI
         likeView.deleteLike(currentID);
-
+        
     }
     likeView.toggleLikeMenu(state.likes.getNumLikes());
 
 }
+
+window.addEventListener('load' ,() => {
+    state.likes = new Likes();
+
+    // Restore Likes Data
+    state.likes.readData();
+
+    // Toggle Like's menu button
+    likeView.toggleLikeMenu(state.likes.getNumLikes());
+
+    //Render Data to the UI
+    state.likes.likes.forEach(like => likeView.renderLike(like));
+
+});
 
 
 // Handling Shopping list buttons
